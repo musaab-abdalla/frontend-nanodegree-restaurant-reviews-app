@@ -46,7 +46,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 #footer {
   background-color: #444;
-  color: #aaa;
+  color: #dbdbdb; /* Failing Elements change from #aaa Low-contrast text is difficult or impossible for many users to read */
   font-size: 8pt;
   letter-spacing: 1px;
   padding: 25px;
@@ -68,7 +68,7 @@ nav h1 a {
   color: #fff;
   font-size: 0.875rem; /* change font from 14pt to rem values are relative to the root */
   font-weight: 200;
-  letter-spacing: 10px;
+  letter-spacing: 8px; /* change from 10px */
   text-transform: uppercase;
 }
 #breadcrumb {
