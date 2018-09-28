@@ -66,7 +66,7 @@ nav h1 {
 }
 nav h1 a {
   color: #fff;
-  font-size: 1rem; /* change font from 14pt to rem values are relative to the root */
+  font-size: 0.875rem; /* change font from 14pt to rem values are relative to the root */
   font-weight: 200;
   letter-spacing: 8px; /* change from 10px */
   text-transform: uppercase;
@@ -121,7 +121,7 @@ nav h1 a {
 }
 .filter-options h2 {
   color: white;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 1;
   margin: 10px;
