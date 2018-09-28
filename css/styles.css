@@ -66,7 +66,7 @@ nav h1 {
 }
 nav h1 a {
   color: #fff;
-  font-size: 0.875rem; /* change font from 14pt to rem values are relative to the root */
+  font-size: 1rem; /* change font from 14pt to rem values are relative to the root */
   font-weight: 200;
   letter-spacing: 8px; /* change from 10px */
   text-transform: uppercase;
@@ -112,27 +112,42 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
-  height: 50px;
+  height: auto; /* Flexible height depend upon the height of children elements*/
   background-color: #3397DB;
   align-items: center;
+  display: flex; /* Filter options becomes flexible by setting the display property to flex */
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .filter-options h2 {
   color: white;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: normal;
   line-height: 1;
-  margin: 0 20px;
+  margin: 10px;
+  text-transform: uppercase;
 }
 .filter-options select {
   background-color: white;
   border: 1px solid #fff;
   font-family: Arial,sans-serif;
   font-size: 11pt;
-  height: 35px;
-  letter-spacing: 0;
+  height: 50px;
+  letter-spacing: 1px;
   margin: 10px;
   padding: 0 10px;
-  width: 200px;
+  width: 100%;
+}
+/* Hiding the label element */
+.filter-options .visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /* ====================== Restaurant Listing ====================== */
