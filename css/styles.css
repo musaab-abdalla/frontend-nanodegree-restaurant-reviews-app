@@ -23,7 +23,7 @@ ul, li {
 	color: #333;
 }
 a {
-	color: orange;
+	color: #83B9ED; /* Low-contrast text is difficult or impossible for many users to read */
 	text-decoration: none;
 }
 a:hover, a:focus {
@@ -45,7 +45,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   min-height: 100%;
 }
 #footer {
-  background-color: #444;
+  background-color: #252831;
   color: #dbdbdb; /* Failing Elements change from #aaa Low-contrast text is difficult or impossible for many users to read */
   font-size: 8pt;
   letter-spacing: 1px;
@@ -113,7 +113,7 @@ nav h1 a {
 .filter-options {
   width: 100%;
   height: auto; /* Flexible height depend upon the height of children elements*/
-  background-color: #3397DB;
+  background-color: #165B92; /* Low-contrast text is difficult or impossible for many users to read */
   align-items: center;
   display: flex; /* Filter options becomes flexible by setting the display property to flex */
   justify-content: center;
@@ -180,7 +180,7 @@ nav h1 a {
   min-width: 100%;
 }
 #restaurants-list li h1 {
-  color: #f18200;
+  color: #165B92; /* Low-contrast text is difficult or impossible for many users to read */
   font-family: Arial,sans-serif;
   font-size: 1.2rem;
   font-weight: 200;
@@ -194,7 +194,7 @@ nav h1 a {
   font-size: 1rem;
 }
 #restaurants-list li a {
-  background-color: orange;
+  background-color: #165B92; /* Low-contrast text is difficult or impossible for many users to read */
   border-bottom: 3px solid #eee;
   color: #fff;
   display: inline-block;
@@ -232,7 +232,7 @@ nav h1 a {
   width: 50%;
 }
 #restaurant-name {
-  color: #f18200;
+  color: #165B92; /* Low-contrast text is difficult or impossible for many users to read */
   font-family: 'Noto Sans',sans-serif;
   font-size: 20pt;
   font-weight: 200;
@@ -270,7 +270,7 @@ nav h1 a {
   padding: 30px 40px 80px;
 }
 #reviews-container h2 {
-  color: #f58500;
+  color: #165B92; /* Low-contrast text is difficult or impossible for many users to read */
   font-size: 24pt;
   font-weight: 300;
   letter-spacing: -1px;
@@ -296,4 +296,9 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/* Low-contrast text is difficult or impossible for many users to read */
+.leaflet-container a {
+  color: #005E8F !important;
 }
