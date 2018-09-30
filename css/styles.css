@@ -63,7 +63,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #footer {
   background-color: #252831;
   color: #dbdbdb; /* Failing Elements change from #aaa Low-contrast text is difficult or impossible for many users to read */
-  font-size: 8pt;
+  font-size: 0.6875rem;
   letter-spacing: 1px;
   padding: 25px;
   text-align: center;
@@ -82,7 +82,7 @@ nav h1 {
 }
 nav h1 a {
   color: #fff;
-  font-size: 0.875rem; /* change font from 14pt to rem values are relative to the root */
+  font-size: 1rem; /* change font from 14pt to rem values are relative to the root */
   font-weight: 200;
   letter-spacing: 8px; /* change from 10px */
   text-transform: uppercase;
@@ -147,7 +147,7 @@ nav h1 a {
   background-color: white;
   border: 1px solid #fff;
   font-family: Arial,sans-serif;
-  font-size: 11pt;
+  font-size: .875rem;
   height: 50px;
   letter-spacing: 1px;
   margin: 10px;
@@ -176,6 +176,7 @@ nav h1 a {
   display: flex; /* Restaurant list becomes flexible by setting the display property to flex */
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -317,4 +318,81 @@ nav h1 a {
 /* Low-contrast text is difficult or impossible for many users to read */
 .leaflet-container a {
   color: #005E8F !important;
+}
+
+/* ==================== Responsive ==================== */
+@media (min-width: 426px) and (max-width:625px) {
+  .filter-options select {
+    width: 100%;
+  }
+  #restaurants-list li {
+    width: 45%;
+    margin: 5px;
+    padding: 10px 15px;
+  }
+}
+@media (min-width: 626px) and (max-width:768px) {
+  nav h1 a {
+    font-size: 1.2rem;
+    letter-spacing: 10px;
+  }
+  .filter-options h2 {
+    font-size: 1.2rem;
+  }
+  .filter-options h2::after {
+    content: ":";
+  }
+  .filter-options select {
+    font-size: 1rem;
+    width: 33.333%;
+  }
+  #restaurants-list li {
+    width: 45%;
+    margin: 5px;
+    padding: 10px 15px;
+  }
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+  nav h1 a {
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+  }
+  .filter-options h2 {
+    font-size: 1.2rem;
+  }
+  .filter-options h2::after {
+    content: ":";
+  }
+  .filter-options select {
+    font-size: 1rem;
+    width: 33.333%;
+  }
+  #restaurants-list li {
+    width: 32%;
+    margin: 5px;
+    padding: 10px 15px;
+  }
+}
+
+@media (min-width: 1025px) {
+  nav h1 a {
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+  }
+  .filter-options h2 {
+    font-size: 1.2rem;
+  }
+  .filter-options h2::after {
+    content: ":";
+  }
+  .filter-options select {
+    font-size: 1rem;
+    width: 33.333%;
+  }
+  #restaurants-list li {
+    width: 32%;
+    margin: 5px;
+    padding: 10px 15px;
+  }
 }
