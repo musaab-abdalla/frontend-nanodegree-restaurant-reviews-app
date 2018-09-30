@@ -6,8 +6,10 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-#skip a
-{
+:focus {
+  box-shadow: 0 0 0 0.2rem rgba(37, 149, 255, 0.5);
+}
+#skip a {
 position:absolute;
 left:-10000px;
 top:auto;
@@ -15,14 +17,12 @@ width:1px;
 height:1px;
 overflow:hidden;
 }
-
-#skip a:focus
-{
+#skip a:focus {
 position:static;
 width:auto;
 height:auto;
 }
-body,td,th,p{
+body,td,th,p {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16px;  /* change base font from 10pt */
 	color: #333;
