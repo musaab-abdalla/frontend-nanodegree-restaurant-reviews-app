@@ -82,9 +82,9 @@ nav h1 {
 }
 nav h1 a {
   color: #fff;
-  font-size: 1rem; /* change font from 14pt to rem values are relative to the root */
+  font-size: 0.875rem; /* change font from 14pt to rem values are relative to the root */
   font-weight: 200;
-  letter-spacing: 8px; /* change from 10px */
+  letter-spacing: 6px; /* change from 10px */
   text-transform: uppercase;
 }
 #breadcrumb {
@@ -176,7 +176,6 @@ nav h1 a {
   display: flex; /* Restaurant list becomes flexible by setting the display property to flex */
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -322,8 +321,15 @@ nav h1 a {
 
 /* ==================== Responsive ==================== */
 @media (min-width: 426px) and (max-width:625px) {
+  nav h1 a {
+    font-size: 1rem;
+    letter-spacing: 8px;
+  }
   .filter-options select {
     width: 100%;
+  }
+  #restaurants-list {
+    justify-content: center;
   }
   #restaurants-list li {
     width: 45%;
@@ -333,8 +339,8 @@ nav h1 a {
 }
 @media (min-width: 626px) and (max-width:768px) {
   nav h1 a {
-    font-size: 1.2rem;
-    letter-spacing: 10px;
+    font-size: 1rem;
+    letter-spacing: 8px;
   }
   .filter-options h2 {
     font-size: 1.2rem;
@@ -345,6 +351,9 @@ nav h1 a {
   .filter-options select {
     font-size: 1rem;
     width: 33.333%;
+  }
+  #restaurants-list {
+    justify-content: center;
   }
   #restaurants-list li {
     width: 45%;
@@ -355,8 +364,8 @@ nav h1 a {
 
 @media (min-width:769px) and (max-width:1024px) {
   nav h1 a {
-    font-size: 1.5rem;
-    letter-spacing: 10px;
+    font-size: 1rem;
+    letter-spacing: 8px;
   }
   .filter-options h2 {
     font-size: 1.2rem;
@@ -368,6 +377,9 @@ nav h1 a {
     font-size: 1rem;
     width: 33.333%;
   }
+  #restaurants-list {
+    justify-content: center;
+  }
   #restaurants-list li {
     width: 32%;
     margin: 5px;
@@ -377,7 +389,7 @@ nav h1 a {
 
 @media (min-width: 1025px) {
   nav h1 a {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     letter-spacing: 10px;
   }
   .filter-options h2 {
