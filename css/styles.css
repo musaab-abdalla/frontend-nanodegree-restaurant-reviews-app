@@ -377,9 +377,6 @@ nav h1 a {
     font-size: 1rem;
     width: 33.333%;
   }
-  #restaurants-list {
-    justify-content: center;
-  }
   #restaurants-list li {
     width: 32%;
     margin: 5px;
