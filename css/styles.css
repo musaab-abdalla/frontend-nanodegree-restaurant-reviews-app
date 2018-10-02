@@ -397,10 +397,10 @@ nav h1 a {
   }
   .filter-options select {
     font-size: 1rem;
-    width: 33.333%;
+    width: 18%;
   }
   #restaurants-list li {
-    width: 32%;
+    width: 18%;
     margin: 5px;
     padding: 10px 15px;
   }
