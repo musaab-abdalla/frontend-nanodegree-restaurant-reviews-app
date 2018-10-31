@@ -156,7 +156,7 @@ nav h1 a {
   width: 100%;
 }
 /* Hiding the label element */
-.filter-options .visuallyhidden {
+.visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -165,6 +165,7 @@ nav h1 a {
   padding: 0;
   position: absolute;
   width: 1px;
+  white-space: nowrap;
 }
 
 /* ====================== Restaurant Listing ====================== */

@@ -17,13 +17,14 @@
     <div id="skip"><a href="#content">Skip to Main Content</a></div>
   <header role="banner">
     <nav>
-      <h1><a tabindex="0" href="/">Restaurant Reviews</a></h1>
+      <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
 
   <main id="maincontent" role="main">
-    <section id="map-container" aria-label="Restaurants locations">
-      <div id="map" role="application"></div>
+    <section id="map-container" role="application">
+      <div id="map" aria-label="Restaurant location" aria-describedby="map-context"></div>
+      <div id="map-context" class="visuallyhidden">Map view to see restaurant locations</div>
     </section>
     <section>
       <div class="filter-options">
