@@ -89,6 +89,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = `${restaurant.name} restaurant image.`;
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
@@ -127,6 +128,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
+  title.id = 'reviews-title';
   title.innerHTML = 'Reviews';
   container.appendChild(title);
 
@@ -148,21 +150,32 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+  li.setAttribute('role', 'listitem');
+  const reviewHeading = document.createElement('div');
+  reviewHeading.className = 'review-heading';
   const name = document.createElement('p');
+  name.className = 'review-name';
   name.innerHTML = review.name;
-  li.appendChild(name);
+  reviewHeading.appendChild(name);
 
   const date = document.createElement('p');
+  date.className = 'review-date';
   date.innerHTML = review.date;
-  li.appendChild(date);
+  reviewHeading.appendChild(date);
+  li.appendChild(reviewHeading);
 
-  const rating = document.createElement('p');
+  const reviewBody = document.createElement('div');
+  reviewBody.className = 'review-body';
+  const rating = document.createElement('div');
+  rating.className = 'review-rating';
   rating.innerHTML = `Rating: ${review.rating}`;
-  li.appendChild(rating);
+  reviewBody.appendChild(rating);
 
-  const comments = document.createElement('p');
+  const comments = document.createElement('div');
+  comments.className = 'review-comment';
   comments.innerHTML = review.comments;
-  li.appendChild(comments);
+  reviewBody.appendChild(comments);
+  li.appendChild(reviewBody);
 
   return li;
 }
@@ -170,10 +183,11 @@ createReviewHTML = (review) => {
 /**
  * Add restaurant name to the breadcrumb navigation menu
  */
-fillBreadcrumb = (restaurant=self.restaurant) => {
+fillBreadcrumb = (restaurant = self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
   li.innerHTML = restaurant.name;
+  li.setAttribute('aria-current', 'page');
   breadcrumb.appendChild(li);
 }
 
